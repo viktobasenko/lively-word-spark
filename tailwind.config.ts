@@ -2,7 +2,6 @@
 import type { Config } from "tailwindcss";
 
 export default {
-  darkMode: ["class"],
   content: [
     "./pages/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
@@ -59,7 +58,6 @@ export default {
           "soft-blue": "#D4E6FF",
           "soft-pink": "#FFE5EC",
           "soft-green": "#E0F5E6",
-          "dark-blue": "#1a1a2e",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",

@@ -1,11 +1,9 @@
+
 import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { cn } from '@/lib/utils';
-import Logo from '../Logo';
 import NavLink from './NavLink';
 import MobileMenu from './MobileMenu';
-import { Button } from '@/components/ui/button';
-// Удалим Vk, так как он не экспортируется из lucide-react
 
 const Header = () => {
   const location = useLocation();
@@ -29,7 +27,7 @@ const Header = () => {
       className={cn(
         'fixed w-full py-4 px-6 md:px-10 transition-all duration-300 z-50',
         isScrolled
-          ? 'bg-white/90 dark:bg-fitkids-dark-blue/90 shadow-md backdrop-blur-md'
+          ? 'bg-white/90 shadow-md backdrop-blur-md'
           : 'bg-transparent'
       )}
     >
@@ -59,7 +57,7 @@ const Header = () => {
             <img
               src="/vk-logo.svg"
               alt="ВКонтакте"
-              className="w-6 h-6 text-black dark:text-white"
+              className="w-6 h-6 text-black"
             />
           </a>
 
