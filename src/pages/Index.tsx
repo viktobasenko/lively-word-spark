@@ -50,9 +50,13 @@ const Index = () => {
         <div className="w-full max-w-7xl mx-auto">
           {/* Hero Section */}
           <div className="flex flex-col items-center justify-center py-12 md:py-20 animate-on-scroll">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-center drop-shadow-lg text-gray-900">
-              FITKIDS
-            </h1>
+            <div className="w-64 h-64 md:w-80 md:h-80 mb-6 flex items-center justify-center">
+              <img 
+                src="/img/logo.svg" 
+                alt="FITKIDS Logo" 
+                className="w-full h-full object-contain"
+              />
+            </div>
             
             <p className="text-lg md:text-xl text-center max-w-2xl mb-12 bg-white/80 p-4 rounded-xl backdrop-blur-sm text-gray-800">
               Детский центр в&nbsp;г.&nbsp;Тихвин - фитнес, ритмика, хореография и&nbsp;гимнастика для детей от&nbsp;2&nbsp;до&nbsp;6&nbsp;лет
