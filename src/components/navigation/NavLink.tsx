@@ -17,8 +17,8 @@ const NavLink = ({ to, currentPath, children }: NavLinkProps) => {
       className={cn(
         "relative py-1 text-base font-medium transition-colors",
         isActive 
-          ? "text-fitkids-yellow" 
-          : "text-gray-700 dark:text-gray-100 hover:text-fitkids-yellow dark:hover:text-fitkids-yellow"
+          ? "text-fitkids-yellow font-bold" 
+          : "text-gray-900 hover:text-fitkids-yellow"
       )}
     >
       {children}

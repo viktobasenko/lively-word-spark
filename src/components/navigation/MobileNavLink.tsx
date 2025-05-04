@@ -17,8 +17,8 @@ const MobileNavLink = ({ to, currentPath, children }: MobileNavLinkProps) => {
       className={cn(
         "w-full text-center py-2 text-lg font-medium",
         isActive 
-          ? "text-fitkids-yellow" 
-          : "text-gray-800 dark:text-gray-100"
+          ? "text-fitkids-yellow font-bold" 
+          : "text-gray-900"
       )}
     >
       {children}

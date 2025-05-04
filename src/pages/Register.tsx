@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import Layout from '@/components/Layout';
 import { toast } from 'sonner';
@@ -17,6 +16,7 @@ import {
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
+import { Separator } from '@/components/ui/separator';
 
 // Form validation schema
 const formSchema = z.object({
@@ -181,18 +181,20 @@ ${values.comment ? `Комментарий: ${values.comment}` : ''}`;
     <Layout>
       <div className="w-full max-w-4xl mx-auto px-4 md:px-10 pt-10 md:pt-16 pb-16">
         <section className="mb-16 animate-on-scroll">
-          <h1 className="text-3xl md:text-5xl font-bold mb-10 text-center">Записаться на занятия</h1>
+          <h1 className="text-3xl md:text-5xl font-bold mb-6 text-center">Записаться на занятия</h1>
           
-          <div className="bg-white/80 dark:bg-fitkids-dark-blue/50 rounded-2xl shadow-lg p-6 md:p-8 lg:p-10 backdrop-blur-sm">
-            <p className="text-lg mb-8 text-center">
+          <Separator className="mb-8 bg-fitkids-yellow/60 h-[2px]" />
+          
+          <div className="bg-fitkids-soft-yellow/50 dark:bg-white/95 rounded-2xl shadow-lg p-6 md:p-8 lg:p-10 backdrop-blur-sm">
+            <p className="text-lg mb-8 text-center text-gray-800">
               Заполните форму ниже, и мы свяжемся с вами для подтверждения записи и ответим на все вопросы
             </p>
             
             {formCooldown ? (
-              <div className="text-center p-8 bg-fitkids-soft-yellow/30 dark:bg-fitkids-dark-blue/70 rounded-lg">
-                <p className="text-xl font-medium mb-4">Форма временно недоступна</p>
-                <p className="mb-2">Вы недавно отправили заявку. Повторная отправка возможна через:</p>
-                <p className="text-2xl font-bold">{formatTime(cooldownTime)}</p>
+              <div className="text-center p-8 bg-fitkids-soft-yellow/60 rounded-lg">
+                <p className="text-xl font-medium mb-4 text-gray-800">Форма временно недоступна</p>
+                <p className="mb-2 text-gray-700">Вы недавно отправили заявку. Повторная отправка возможна через:</p>
+                <p className="text-2xl font-bold text-gray-800">{formatTime(cooldownTime)}</p>
               </div>
             ) : (
               <Form {...form}>
@@ -203,11 +205,11 @@ ${values.comment ? `Комментарий: ${values.comment}` : ''}`;
                     name="name"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-gray-900 dark:text-gray-100">Имя ребёнка *</FormLabel>
+                        <FormLabel className="text-gray-900">Имя ребёнка *</FormLabel>
                         <FormControl>
                           <Input 
                             placeholder="Введите имя ребёнка" 
-                            className="bg-white dark:bg-gray-800" 
+                            className="bg-white" 
                             {...field} 
                           />
                         </FormControl>
@@ -222,11 +224,11 @@ ${values.comment ? `Комментарий: ${values.comment}` : ''}`;
                     name="phone"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-gray-900 dark:text-gray-100">Номер телефона *</FormLabel>
+                        <FormLabel className="text-gray-900">Номер телефона *</FormLabel>
                         <FormControl>
                           <Input 
                             placeholder="+7 (___) ___-__-__" 
-                            className="bg-white dark:bg-gray-800" 
+                            className="bg-white" 
                             {...field} 
                           />
                         </FormControl>
@@ -241,10 +243,10 @@ ${values.comment ? `Комментарий: ${values.comment}` : ''}`;
                     name="age"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-gray-900 dark:text-gray-100">Возраст ребёнка *</FormLabel>
+                        <FormLabel className="text-gray-900">Возраст ребёнка *</FormLabel>
                         <FormControl>
                           <select
-                            className="w-full rounded-md border border-input bg-white dark:bg-gray-800 px-3 py-2 text-base md:text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                            className="w-full rounded-md border border-input bg-white px-3 py-2 text-base md:text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 text-gray-900"
                             {...field}
                           >
                             <option value="" disabled>Выберите возраст</option>
@@ -266,10 +268,10 @@ ${values.comment ? `Комментарий: ${values.comment}` : ''}`;
                     name="activity"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-gray-900 dark:text-gray-100">Направление *</FormLabel>
+                        <FormLabel className="text-gray-900">Направление *</FormLabel>
                         <FormControl>
                           <select
-                            className="w-full rounded-md border border-input bg-white dark:bg-gray-800 px-3 py-2 text-base md:text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                            className="w-full rounded-md border border-input bg-white px-3 py-2 text-base md:text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 text-gray-900"
                             disabled={!age}
                             {...field}
                           >
@@ -295,11 +297,11 @@ ${values.comment ? `Комментарий: ${values.comment}` : ''}`;
                     name="comment"
                     render={({ field }) => (
                       <FormItem>
-                        <FormLabel className="text-gray-900 dark:text-gray-100">Комментарий</FormLabel>
+                        <FormLabel className="text-gray-900">Комментарий</FormLabel>
                         <FormControl>
                           <Textarea 
                             placeholder="Дополнительная информация или вопросы..." 
-                            className="bg-white dark:bg-gray-800 min-h-[120px]" 
+                            className="bg-white min-h-[120px] text-gray-900" 
                             {...field} 
                           />
                         </FormControl>

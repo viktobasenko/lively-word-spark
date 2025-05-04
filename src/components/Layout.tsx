@@ -3,7 +3,6 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import Header from './navigation/Header';
 import Footer from './Footer';
-import ThemeToggle from './ThemeToggle';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -39,11 +38,6 @@ const Layout = ({ children }: LayoutProps) => {
       <main className="flex-grow pt-16 md:pt-20">
         {children}
       </main>
-      
-      {/* Theme Toggle Button */}
-      <div className="fixed bottom-6 right-6 z-50">
-        <ThemeToggle />
-      </div>
       
       {/* Footer */}
       <Footer />

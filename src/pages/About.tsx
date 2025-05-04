@@ -94,12 +94,12 @@ const About = () => {
         <section className="animate-on-scroll py-12">
           <div className="flex flex-col md:flex-row justify-center items-center gap-16 md:gap-32">
             <div className="text-center">
-              <div className="text-5xl md:text-7xl font-bold text-fitkids-yellow mb-2">250</div>
-              <div className="text-xl md:text-2xl font-medium">выпускников</div>
+              <div className="text-5xl md:text-7xl font-bold text-fitkids-yellow mb-2">300+</div>
+              <div className="text-xl md:text-2xl font-medium">выпускников, поступивших в муниципальные коллективы</div>
             </div>
             
             <div className="text-center">
-              <div className="text-5xl md:text-7xl font-bold text-fitkids-yellow mb-2">6+</div>
+              <div className="text-5xl md:text-7xl font-bold text-fitkids-yellow mb-2">10</div>
               <div className="text-xl md:text-2xl font-medium">лет работы</div>
             </div>
           </div>
