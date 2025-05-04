@@ -55,7 +55,7 @@ const Header = () => {
             aria-label="ВКонтакте"
           >
             <img
-              src="/vk-logo.svg"
+              src="/img/vk-logo.svg"
               alt="ВКонтакте"
               className="w-6 h-6 text-black"
             />
